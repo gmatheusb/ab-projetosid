@@ -3,7 +3,7 @@
 <html lang="pt-br">
     
 <head>
-        <title>MAP OS</title><meta charset="UTF-8" />
+        <title>aBlue SiD</title><meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap.min.css" />
         <link rel="stylesheet" href="<?php echo base_url()?>assets/css/bootstrap-responsive.min.css" />
@@ -13,7 +13,7 @@
         <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/img/fav.png">
     </head>
     <body>
-        <div id="loginbox">            
+        <div id="loginbox">        
             <form  class="form-vertical" id="formLogin" method="post" action="<?php echo base_url()?>index.php/mapos/verificarLogin">
                     <?php if ($this->session->flashdata('error') != null) {?>
                         <div class="alert alert-danger">
@@ -21,14 +21,17 @@
                             <?php echo $this->session->flashdata('error');?>
                        </div>
                     <?php }?>
-                <div class="control-group normal_text"> <h3><img src="<?php echo base_url()?>assets/img/logo.png" alt="Logo" /></h3></div>
-                <div class="control-group">
+                    <div class="control-group normal_text">
+                          <img id="profile-img" class="profile-img-card" src="https://uploaddeimagens.com.br/images/001/691/871/original/Sem_t%C3%ADtulo-1.png?1540597531"  align="center" />
+                    </div>
+                    <p id="profile-name" class="profile-name-card">Faça seu Login abaixo</p>
+                  <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
                             <span class="add-on bg_lg"><i class="icon-user"></i></span><input id="email" name="email" type="text" placeholder="Email" />
                         </div>
                     </div>
-                </div>
+                  </div>
                 <div class="control-group">
                     <div class="controls">
                         <div class="main_input_box">
@@ -36,10 +39,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-actions" style="text-align: center">
-                    <div id="progress-acessar" class='hide progress progress-info progress-striped active'><div class='bar' style='width: 100%'></div></div>
-                    <button id="btn-acessar" class="btn btn-success btn-large"/> Acessar</button>
-                </div>
+                <button class="btn btn-primary btn-block btn-signin" type="submit">Entrar</button>
+                <button class="btn btn-primary btn-block btn-signin"><a style="cursor: default;" href="http://localhost/absid/index.php/mine/cadastrar">Cadastre-se</a></button>
+            </form><!-- /form -->
+        </div><!-- /card-container -->
             </form>
        
         </div>
@@ -116,7 +119,7 @@
         <div id="notification" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 id="myModalLabel">MapOS</h4>
+            <h4 id="myModalLabel">aBlue SiD</h4>
           </div>
           <div class="modal-body">
             <h5 style="text-align: center">Os dados de acesso estão incorretos, por favor tente novamente!</h5>
